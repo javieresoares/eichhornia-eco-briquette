@@ -20,14 +20,13 @@ RUN apt-get update \
     && docker-php-ext-install mbstring zip \
     && a2enmod rewrite \
     && sed -ri 's/Listen 80/Listen 10000/' /etc/apache2/ports.conf \
-    && sed -ri 's/<VirtualHost \\*:80>/<VirtualHost *:10000>/' /etc/apache2/sites-available/000-default.conf \
+    && sed -ri 's/<VirtualHost \*:80>/<VirtualHost *:10000>/' /etc/apache2/sites-available/000-default.conf \
     && rm -rf /var/lib/apt/lists/*
 
 ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
 ENV APACHE_RUN_PORT=10000
 
-
-RUN sed -ri 's!/var/www/html!/var/www/html/public!g' \
+RUN sed -ri 's!DocumentRoot /var/www/html!DocumentRoot /var/www/html/public!' \
     /etc/apache2/sites-available/000-default.conf \
     && printf '%s\n' \
         '<Directory /var/www/html/public>' \
@@ -35,7 +34,10 @@ RUN sed -ri 's!/var/www/html!/var/www/html/public!g' \
         '    Require all granted' \
         '</Directory>' \
         > /etc/apache2/conf-available/laravel-public.conf \
-    && a2enconf laravel-public
+    && a2enconf laravel-public \
+    && grep -E 'Listen ' /etc/apache2/ports.conf \
+    && grep -E 'VirtualHost|DocumentRoot' /etc/apache2/sites-available/000-default.conf \
+    && apache2ctl configtest
 
 WORKDIR /var/www/html
 
@@ -51,6 +53,10 @@ RUN composer install \
 
 COPY . .
 COPY --from=frontend /app/public/build ./public/build
+
+RUN test -f public/index.php \
+    && test -f public/build/manifest.json \
+    && echo "Laravel entry point and Vite manifest found"
 
 RUN composer dump-autoload \
     --no-dev \
