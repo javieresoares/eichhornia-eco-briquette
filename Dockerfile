@@ -26,8 +26,10 @@ RUN apt-get update \
 ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
 ENV APACHE_RUN_PORT=10000
 
-RUN sed -ri 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/000-default.conf \
-    && printf '%s\\n' \
+
+RUN sed -ri 's!/var/www/html!/var/www/html/public!g' \
+    /etc/apache2/sites-available/000-default.conf \
+    && printf '%s\n' \
         '<Directory /var/www/html/public>' \
         '    AllowOverride All' \
         '    Require all granted' \
