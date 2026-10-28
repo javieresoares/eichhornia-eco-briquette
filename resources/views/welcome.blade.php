@@ -1164,7 +1164,7 @@
 
                             <span class="footer-social-text">
                                 <strong>TikTok</strong>
-                                <small>@eichhornia.eco.briquette</small>
+                                <small>@eichhornia.ecobriquette</small>
                             </span>
 
                             <i class="fa-solid fa-arrow-up-right-from-square footer-social-arrow"
