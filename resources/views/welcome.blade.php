@@ -1155,7 +1155,7 @@
                         </a>
 
                         {{-- TikTok --}}
-                        <a href="https://www.tiktok.com/@eichhornia.eco.briquette" class="footer-social-link"
+                        <a href="https://www.tiktok.com/@eichhornia.ecobriquette" class="footer-social-link"
                             target="_blank" rel="noopener noreferrer" data-i18n-aria-label="footer.tiktokAriaLabel">
 
                             <span class="footer-social-icon" aria-hidden="true">
