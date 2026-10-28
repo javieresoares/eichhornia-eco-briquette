@@ -7,18 +7,15 @@
 
     <title>Eichhornia Eco Briquette | Biomass Innovation Project</title>
 
-    <meta
-        name="description"
-        id="meta-description"
+    <meta name="description" id="meta-description"
         content="Eichhornia Eco Briquette adalah proyek kewirausahaan mahasiswa tahun 2025 yang mengeksplorasi pemanfaatan sekam padi dan tempurung kelapa sebagai biomassa."
         data-description-id="Eichhornia Eco Briquette adalah proyek kewirausahaan mahasiswa tahun 2025 yang mengeksplorasi pemanfaatan sekam padi dan tempurung kelapa sebagai biomassa."
-        data-description-en="Eichhornia Eco Briquette is a 2025 student entrepreneurship project exploring the use of rice husks and coconut shells as biomass resources."
-    >
+        data-description-en="Eichhornia Eco Briquette is a 2025 student entrepreneurship project exploring the use of rice husks and coconut shells as biomass resources.">
 
     <meta name="theme-color" content="#FBF9FA">
     <meta name="color-scheme" content="light">
 
-    
+
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('favicon.ico') }}" sizes="any">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
@@ -28,21 +25,11 @@
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
-    >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -54,8 +41,8 @@
 
             {{-- Brand Identity --}}
             <a class="brand-logo" href="#beranda" aria-label="Eichhornia Eco Briquette">
-                <img src="{{ asset('images/eichhornia-logo.png') }}" alt="" class="brand-image" width="42"
-                    height="42" fetchpriority="high">
+                <img src="{{ asset('images/eichhornia-logo.webp') }}" alt="" class="brand-image" width="42"
+                    height="42" decoding="async">
 
                 <span class="brand-wordmark">
                     EICHHORNIA
@@ -131,7 +118,7 @@
 
             {{-- Full-section Background Image --}}
             <div class="hero-visual" aria-hidden="true">
-                <img src="{{ asset('images/hero-briquette.png') }}" alt="" class="hero-product-image"
+                <img src="{{ asset('images/hero-briquette.webp') }}" alt="" class="hero-product-image"
                     width="1648" height="928" fetchpriority="high">
             </div>
 
@@ -269,7 +256,7 @@
 
                 {{-- Left: Product Visual --}}
                 <div class="about-visual">
-                    <img src="{{ asset('images/about-briquette.png') }}"
+                    <img src="{{ asset('images/about-briquette.webp') }}"
                         alt="Ilustrasi konseptual briket biomassa dari sekam padi dan tempurung kelapa"
                         data-i18n-alt="about.imageAlt" width="1405" height="1024" loading="lazy">
                 </div>
@@ -544,7 +531,7 @@
                     {{-- Variant 1: Cube --}}
                     <article class="product-card scroll-reveal">
                         <div class="product-image">
-                            <img src="{{ asset('images/briquette-cube.png') }}"
+                            <img src="{{ asset('images/briquette-cube.webp') }}"
                                 alt="Visual konseptual Eichhornia Eco Briquette berbentuk kubus"
                                 data-i18n-alt="products.cube.imageAlt" class="product-card-image" width="1024"
                                 height="1024" loading="lazy" decoding="async">
@@ -574,7 +561,7 @@
                     {{-- Variant 2: Hexagonal --}}
                     <article class="product-card scroll-reveal" data-delay="1">
                         <div class="product-image">
-                            <img src="{{ asset('images/briquette-hexagonal.png') }}"
+                            <img src="{{ asset('images/briquette-hexagonal.webp') }}"
                                 alt="Visual konseptual Eichhornia Eco Briquette berbentuk heksagonal"
                                 data-i18n-alt="products.hexagonal.imageAlt" class="product-card-image" width="1024"
                                 height="1024" loading="lazy" decoding="async">
@@ -604,7 +591,7 @@
                     {{-- Variant 3: Octagonal --}}
                     <article class="product-card scroll-reveal" data-delay="2">
                         <div class="product-image">
-                            <img src="{{ asset('images/briquette-octagonal.png') }}"
+                            <img src="{{ asset('images/briquette-octagonal.webp') }}"
                                 alt="Visual konseptual Eichhornia Eco Briquette berbentuk oktagonal"
                                 data-i18n-alt="products.octagonal.imageAlt" class="product-card-image" width="1024"
                                 height="1024" loading="lazy" decoding="async">
@@ -1066,8 +1053,8 @@
 
                     <a href="#beranda" class="footer-brand-link" data-i18n-aria-label="footer.brandAriaLabel">
 
-                        <img src="{{ asset('images/eichhornia-logo.png') }}" alt="" class="footer-logo-image"
-                            width="42" height="42" loading="lazy">
+                        <img src="{{ asset('images/eichhornia-logo.webp') }}" alt=""
+                            class="footer-logo-image" width="42" height="42" loading="lazy">
 
                         <span class="footer-brand-name">
                             EICHHORNIA
